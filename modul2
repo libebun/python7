@@ -1,0 +1,8 @@
+# 1, 2
+select 'This is ' || name || ', ' || ( CASE WHEN gender = 'm' then 'he' WHEN gender = 'f' then 'she' else 'it' END ) || ' has email ' || email as info from list;
+
+# 3
+select 'We have ' || COUNT(*) || ( CASE WHEN gende r = 'm' then ' boys' WHEN gender = 'f' then ' girls' else 'it' END ) || '!' as "Gender Information:" from list group by gender;
+
+# 4, 5
+select name, count(name) as words from vocabulary inner join word on (vocabulary.id = word.vocabulary_id) group by name;
